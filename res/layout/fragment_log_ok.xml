@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+ 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+		<RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="446dp" >
+
+	        <ImageView
+	            android:id="@+id/animation_loading_image"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerHorizontal="true"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/ic_launcher" />
+
+	        <TextView
+	            android:id="@+id/swipe_for_refresh"
+	            android:layout_height="wrap_content"
+	            android:layout_width="fill_parent"
+	            android:layout_alignBottom="@+id/profilePhoto"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginBottom="16dp"
+				android:gravity="center_horizontal"
+	            android:text="Swipe down for refreshing"
+	            android:textSize="20sp" />
+
+	        <Button
+	            android:id="@+id/mate"
+	            android:layout_width="100dp"
+	            android:layout_height="60dp"
+	            android:layout_alignParentBottom="true"
+	            android:layout_alignParentRight="true"
+	            android:layout_toRightOf="@+id/animation_loading_image"
+	            android:background="@drawable/buttonshapemates"
+	            android:text="mate!"
+	            android:textColor="#FFFFFF"
+	            android:textSize="30sp" />
+
+	        <Button
+	            android:id="@+id/next"
+	            android:layout_width="100dp"
+	            android:layout_height="60dp"
+	            android:layout_alignParentBottom="true"
+	            android:layout_alignParentLeft="true"
+	            android:layout_toLeftOf="@+id/animation_loading_image"
+	            android:background="@drawable/buttonshapenext"
+	            android:text="next"
+	            android:textColor="#FFFFFF"
+	            android:textSize="30sp" /> 
+
+	        <ImageView
+	            android:id="@+id/profilePhoto"
+	            android:layout_width="match_parent"
+	            android:layout_height="330dp"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentTop="true"
+	            android:layout_marginTop="19dp" />
+
+	        <TextView
+	            android:id="@+id/NameLogOk"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentRight="true"
+	            android:layout_below="@+id/swipe_for_refresh"
+	            android:text="TextView"
+	            android:textSize="25sp" />
+
+		</RelativeLayout>
+    </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>    
+
+    
+
+</LinearLayout>

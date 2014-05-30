@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pti.mates"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+     The following two permissions are not required to use
+     Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+    <!-- Permissions for GCM only -->
+    <permission
+        android:name="com.pti.mates.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.pti.mates.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.pti.mates.Common"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.pti.mates.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.pti.mates.LogIn"
+            android:label="@string/title_activity_log_in" >
+        </activity>
+        <activity
+            android:name="com.pti.mates.LogOut"
+            android:label="@string/title_activity_log_out" >
+        </activity>
+        <activity
+            android:name="com.pti.mates.LogOn"
+            android:label="@string/title_activity_log_on" >
+        </activity>
+        <activity
+            android:name="com.pti.mates.LogOk"
+            android:label="@string/title_activity_log_ok" >
+        </activity>
+        <activity
+            android:name="com.pti.mates.Detailedinfo"
+            android:label="@string/title_activity_detailedinfo" >
+        </activity>
+        <activity
+            android:name="com.pti.mates.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCOpiGByfUm_SK_gCSY9SliHn2TtqBjfrI" />
+
+        <activity
+            android:name="com.pti.mates.MapLocationGPS"
+            android:label="@string/title_activity_map_location_gps" >
+        </activity>
+        <activity
+            android:name="com.pti.mates.PhotoGallery"
+            android:label="@string/title_activity_photo_gallery" >
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity
+            android:name="com.pti.mates.PostTry"
+            android:label="@string/title_activity_post_try" >
+        </activity>
+        <!-- Reciver for GCM -->
+        <receiver
+            android:name="com.pti.mates.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.pti.mates" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.pti.mates.GcmIntentService" />
+        <!-- Provider for GCM -->
+        <provider
+            android:name="com.pti.mates.DataProvider"
+            android:authorities="com.pti.mates.provider"
+            android:exported="false" >
+        </provider>
+
+        <activity
+            android:name="com.pti.mates.InitialChatActivity"
+            android:label="@string/title_activity_initial_chat" >
+        </activity>
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/title_facebook_login" >
+        </activity>
+        <activity android:name="com.pti.mates.ChatActivity" />
+        <activity
+            android:name="com.pti.mates.PagerActivity"
+            android:label="@string/title_activity_pager" >
+        </activity>
+        <activity
+            android:name="com.pti.mates.ProbaGPS"
+            android:label="@string/title_activity_proba_gps" >
+        </activity>
+        <activity
+            android:name="com.pti.mates.Register"
+            android:label="@string/title_activity_register" >
+        </activity>
+         <activity
+            android:name="com.pti.mates.ProfileActivity"
+            android:label="@string/title_activity_profile" >
+        </activity>
+    </application>
+    
+
+
+</manifest>

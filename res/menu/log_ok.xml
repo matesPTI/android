@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:tools="http://schemas.android.com/tools"
+    	xmlns:yourapp="http://schemas.android.com/apk/res-auto"
+    	tools:context="com.pti.mates.LogOk" >
+
+    <item
+        android:id="@+id/shownav"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="ShowNav"
+        yourapp:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    
+    <item
+        android:id="@+id/action_add"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Add"
+        yourapp:showAsAction="always"/>
+
+</menu>
